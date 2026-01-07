@@ -35,10 +35,29 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  provider: ^6.1.5+1
+  flutter_svg: ^2.2.3
+  flutter_localization: ^0.3.3
+  intl: ^0.20.2
+  bot_toast: ^4.1.3
+  google_maps_flutter: ^2.14.0
+  image_picker: ^1.2.1
+  flutter_html: ^3.0.0
+  retry: ^3.1.2
+  http: ^1.6.0
+  shared_preferences: ^2.5.4
+  dropdown_button2: ^2.3.9
+  file_picker: ^8.0.0
+  permission_handler: ^11.3.1
+  flutter_foreground_task: ^9.2.0
+  geolocator: ^11.0.0
+  android_intent_plus: ^6.0.0
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_native_splash: ^2.4.7
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -51,12 +70,30 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
+
 flutter:
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  generate: true
+
+  assets:
+    - assets/icons/
+    - assets/images/
+
+
+  fonts:
+    - family: GeneralSans
+      fonts:
+        - asset: assets/fonts/GeneralSans-Regular.otf
+        - asset: assets/fonts/GeneralSans-Semibold.otf
+          weight: 400
+        - asset: assets/fonts/GeneralSans-Medium.otf
+          weight: 500
+        - asset: assets/fonts/GeneralSans-Bold.otf
+          weight: 900
 
   # To add assets to your application, add an assets section, like this:
   # assets:
@@ -88,3 +125,28 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+#flutter_native_splash:
+#  android: true
+#  ios: true
+#  image: assets/images/logo.png
+##  background_image: assets/images/splash.jpg
+#  android_gravity: fill
+#
+#  android_12:
+#    image: assets/images/logo.png
+##    background_image: assets/images/splash.jpg
+#    android_gravity: fill
+#
+
+
+flutter_native_splash:
+  android: true
+  ios: true        # or true if you need
+#  fullscreen: true
+  # background color (required if using background image)
+  color: "#FFFFFF"
+  # background image
+#  background_image: assets/images/splash_orange.png
+  # center logo
+  image: assets/images/logo.png
+  android_gravity: center

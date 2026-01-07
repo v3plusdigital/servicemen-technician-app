@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "944890224670",
+    "project_id": "servicemen-61cfb",
+    "storage_bucket": "servicemen-61cfb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:944890224670:android:6324a22c6722cef437ce0f",
+        "android_client_info": {
+          "package_name": "com.servicemen.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "944890224670-dmlir5lrnkb1qccps1dd3nosgvs0u1tb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCF1tc089y-Uu0yjPeln3pTxIpR12ToAIM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "944890224670-dmlir5lrnkb1qccps1dd3nosgvs0u1tb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "944890224670-7pqr916i8perda4jtvo23k9u5osc6vjp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.servicemen.technician"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:944890224670:android:ff33e80f4923ba4837ce0f",
+        "android_client_info": {
+          "package_name": "com.servicemen.technician"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "944890224670-dmlir5lrnkb1qccps1dd3nosgvs0u1tb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCF1tc089y-Uu0yjPeln3pTxIpR12ToAIM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "944890224670-dmlir5lrnkb1qccps1dd3nosgvs0u1tb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "944890224670-7pqr916i8perda4jtvo23k9u5osc6vjp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.servicemen.technician"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
