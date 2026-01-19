@@ -192,6 +192,12 @@ class AppLocalizationsGu extends AppLocalizations {
   String get uploadImage => 'છબી અપલોડ કરો';
 
   @override
+  String get takePhoto => 'ફોટો લો';
+
+  @override
+  String get chooseFromGallery => 'ગેલેરીમાંથી પસંદ કરો';
+
+  @override
   String get uploadJEPGPNG => 'JPEG / PNG અપલોડ કરો';
 
   @override
@@ -270,4 +276,10 @@ class AppLocalizationsGu extends AppLocalizations {
   @override
   String get areYouSureYouWantToLogOut =>
       'શું તમે ખરેખર લૉગ આઉટ કરવા માંગો છો?';
+
+  @override
+  String get completedDate => 'પૂર્ણ થયાની તારીખ';
+
+  @override
+  String get cancelledDate => 'રદ કરવાની તારીખ';
 }

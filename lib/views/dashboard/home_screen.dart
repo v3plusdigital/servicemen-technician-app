@@ -18,6 +18,7 @@ import '../../utils/app_images.dart';
 import '../../utils/app_textstyles.dart';
 import '../../utils/build_extention.dart';
 import '../account/account_screen.dart';
+import '../booking/booking_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -29,19 +30,18 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   bool _calledOnce = false;
   void openBatteryOptimizationSettings() {
-      const intent = AndroidIntent(
-        action: 'android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS',
-      );
+    const intent = AndroidIntent(
+      action: 'android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS',
+    );
     intent.launch();
   }
-
 
   @override
   void initState() {
     super.initState();
     // Don't stop tracking here - let startTrackingIfOnline handle it based on online status
   }
-  
+
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -49,7 +49,6 @@ class _HomeScreenState extends State<HomeScreen> {
     _calledOnce = true;
     // context.read<DashboardProvider>().changeIndex(0);
     WidgetsBinding.instance.addPostFrameCallback((_) {
-
       print("Home screen calling-----");
       // context.read<DashboardProvider>().addingChooseServiceList(context);
       // context.read<DashboardProvider>().dashboard(context);
@@ -62,14 +61,13 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
-  showDialogOfBattery(){
+  showDialogOfBattery() {
     showDialog(
       context: context,
       builder: (_) => AlertDialog(
         title: const Text('Background Permission'),
         content: const Text(
-            'To keep you online, please allow background operation.'
-        ),
+            'To keep you online, please allow background operation.'),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
@@ -104,7 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
           case 0:
             return buildHome();
           case 1:
-            return Container();
+            return const BookingScreen();
           case 2:
             return const AccountScreen();
           default:
@@ -403,7 +401,32 @@ class _HomeScreenState extends State<HomeScreen> {
                   title:
                       index == 1 ? context.l10n.booking : context.l10n.account,
                   leading: false,
-                );
+                  actionWidget: index == 2
+                      ? [
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 5, horizontal: 10),
+                            margin: const EdgeInsets.only(right: 15),
+                            decoration: BoxDecoration(
+                                color: AppColors.kPrimaryColor,
+                                borderRadius: BorderRadius.circular(5)),
+                            child: Row(
+                              children: [
+                                AppImageWidget().svgImage(
+                                    imageName: AppImages.starIcon,
+                                    height: 20,
+                                    width: 20),
+                                const SizedBox(
+                                  width: 5,
+                                ),
+                                const Text("2.0",
+                                    style:
+                                        AppTextStyles.sf16kWhiteW600TextStyle)
+                              ],
+                            ),
+                          )
+                        ]
+                      : null);
         },
       ),
     );

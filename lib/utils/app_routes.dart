@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:servicemen_technician_app/providers/dashboard_provider.dart';
+import '../models/booking_view_model.dart';
 import '../views/auth/login_screen.dart';
 import '../views/auth/otp_verification_screen.dart';
 import '../views/auth/profile_information_screen.dart';
 import '../views/auth/splash_screen.dart';
+import '../views/booking/booking_detail_screen.dart';
 import '../views/dashboard/home_screen.dart';
 
 class AppRoutes {
@@ -48,6 +50,11 @@ class AppRoutes {
             ],
             child: const HomeScreen(),
           ),
+        );
+      case bookingDetails:
+        final booking = settings.arguments as Booking;
+        return MaterialPageRoute(
+          builder: (_) => BookingDetailScreen(booking: booking),
         );
       default:
         return MaterialPageRoute(

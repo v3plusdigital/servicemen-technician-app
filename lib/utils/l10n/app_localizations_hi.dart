@@ -192,6 +192,12 @@ class AppLocalizationsHi extends AppLocalizations {
   String get uploadImage => 'छवि अपलोड करें';
 
   @override
+  String get takePhoto => 'फोटो लें';
+
+  @override
+  String get chooseFromGallery => 'गैलरी से चुनें';
+
+  @override
   String get uploadJEPGPNG => 'JPEG / PNG अपलोड करें';
 
   @override
@@ -271,4 +277,10 @@ class AppLocalizationsHi extends AppLocalizations {
   @override
   String get areYouSureYouWantToLogOut =>
       'क्या आप वाकई लॉग आउट करना चाहते हैं?';
+
+  @override
+  String get completedDate => 'पूर्ण होने की तिथि';
+
+  @override
+  String get cancelledDate => 'रद्द करने की तारीख';
 }

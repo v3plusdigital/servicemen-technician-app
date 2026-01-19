@@ -173,8 +173,7 @@ class DashboardProvider extends ChangeNotifier {
       // Location tracking started successfully, now call API
       final cancel = BotToast.showLoading();
       try {
-        final response =
-            await authRepo.updateOnlineStatus("online");
+        final response = await authRepo.updateOnlineStatus("online");
 
         if (response.success) {
           // API succeeded - turn switch ON
@@ -187,34 +186,31 @@ class DashboardProvider extends ChangeNotifier {
           // API failed - but tracking is working, so turn switch ON anyway
           // changeOnlineStatus(true);
           errorMessage = response.error?.message;
-          print("⚠️ API error but tracking started: ${response.error?.message}");
-
+          print(
+              "⚠️ API error but tracking started: ${response.error?.message}");
+          BotToast.showText(text: errorMessage ?? response.message);
         }
       } catch (e) {
         // API failed - but tracking is working, so turn switch ON anyway
         // changeOnlineStatus(true);
         errorMessage = "Something went wrong";
         print("⚠️ API error but tracking started: $e");
-
+        BotToast.showText(text: errorMessage!);
       } finally {
         cancel();
         notifyListeners();
       }
     } else {
-     
-     
-
       // Call API to update offline status
       final cancel = BotToast.showLoading();
       try {
         final response = await authRepo.updateOnlineStatus("offline");
 
         if (response.success) {
-           // User wants to go offline
-           await stopTracking();
-         changeOnlineStatus(false);
-         
-        }else{
+          // User wants to go offline
+          await stopTracking();
+          changeOnlineStatus(false);
+        } else {
           print("⚠️ API error on offline: ${response.error?.message}");
         }
       } catch (e) {
@@ -226,15 +222,17 @@ class DashboardProvider extends ChangeNotifier {
     }
   }
 
-
-
-  Future<bool> startTracking(BuildContext context, {bool showToast = true}) async {
-    final success = await LocationService().startLocationTracking(context: context);
+  Future<bool> startTracking(BuildContext context,
+      {bool showToast = true}) async {
+    final success =
+        await LocationService().startLocationTracking(context: context);
     if (!success) {
       print("⚠️ Failed to start location tracking. Please check permissions.");
       // Only show toast if explicitly requested and context is mounted
       if (showToast && context.mounted) {
-        BotToast.showText(text: "Failed to start location tracking. Please check permissions.");
+        BotToast.showText(
+            text:
+                "Failed to start location tracking. Please check permissions.");
       }
       return false;
     } else {
@@ -259,12 +257,15 @@ class DashboardProvider extends ChangeNotifier {
     try {
       final position = await LocationService().getCurrentLocation();
       if (position != null) {
-        print("📍 Sending initial location: ${position.latitude}, ${position.longitude}");
-        final response = await authRepo.updateLocation(position.latitude, position.longitude);
+        print(
+            "📍 Sending initial location: ${position.latitude}, ${position.longitude}");
+        final response = await authRepo.updateLocation(
+            position.latitude, position.longitude);
         if (response.success) {
           print("✅ Initial location sent successfully");
         } else {
-          print("⚠️ Failed to send initial location: ${response.error?.message}");
+          print(
+              "⚠️ Failed to send initial location: ${response.error?.message}");
         }
       } else {
         print("⚠️ Could not get current location");

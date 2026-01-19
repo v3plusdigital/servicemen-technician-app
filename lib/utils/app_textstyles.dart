@@ -62,6 +62,11 @@ class AppTextStyles {
     color: AppColors.kWhite,
     fontWeight: FontWeight.w500,
   );
+  static const sf16kWhiteW600TextStyle = TextStyle(
+    fontSize: 16,
+    color: AppColors.kWhite,
+    fontWeight: FontWeight.w600,
+  );
   static const sf12kWhiteW400TextStyle = TextStyle(
     fontSize: 12,
     color: AppColors.kWhite,
@@ -133,7 +138,7 @@ class AppTextStyles {
   static const sf14kRedW500TextStyle = TextStyle(
     fontSize: 14,
     color: AppColors.kRed,
-    fontWeight:  FontWeight.w500,
+    fontWeight: FontWeight.w500,
   );
   static const sf12kRedW400TextStyle = TextStyle(
     fontSize: 12,
@@ -160,13 +165,10 @@ class AppTextStyles {
     fontWeight: FontWeight.w400,
   );
 
-
   ///orange
   static const sf12kGreenW400TextStyle = TextStyle(
     fontSize: 12,
     color: AppColors.kGreen,
     fontWeight: FontWeight.w400,
   );
-
-
 }

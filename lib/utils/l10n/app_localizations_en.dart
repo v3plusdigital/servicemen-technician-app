@@ -191,6 +191,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get uploadImage => 'Upload Image';
 
   @override
+  String get takePhoto => 'Take Photo';
+
+  @override
+  String get chooseFromGallery => 'Choose from Gallery';
+
+  @override
   String get uploadJEPGPNG => 'Upload JEPG / PNG';
 
   @override
@@ -268,4 +274,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get areYouSureYouWantToLogOut => 'Are you sure you want to log out?';
+
+  @override
+  String get completedDate => 'Completed Date';
+
+  @override
+  String get cancelledDate => 'Cancelled Date';
 }

@@ -456,6 +456,18 @@ abstract class AppLocalizations {
   /// **'Upload Image'**
   String get uploadImage;
 
+  /// No description provided for @takePhoto.
+  ///
+  /// In en, this message translates to:
+  /// **'Take Photo'**
+  String get takePhoto;
+
+  /// No description provided for @chooseFromGallery.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose from Gallery'**
+  String get chooseFromGallery;
+
   /// No description provided for @uploadJEPGPNG.
   ///
   /// In en, this message translates to:
@@ -611,6 +623,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Are you sure you want to log out?'**
   String get areYouSureYouWantToLogOut;
+
+  /// No description provided for @completedDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Completed Date'**
+  String get completedDate;
+
+  /// No description provided for @cancelledDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancelled Date'**
+  String get cancelledDate;
 }
 
 class _AppLocalizationsDelegate

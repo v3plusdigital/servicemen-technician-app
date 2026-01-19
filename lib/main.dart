@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 import 'package:provider/provider.dart';
 import 'package:servicemen_technician_app/providers/auth_provider.dart';
+import 'package:servicemen_technician_app/providers/booking_provider.dart';
 import 'package:servicemen_technician_app/providers/dashboard_provider.dart';
 import 'package:servicemen_technician_app/services/api/api_client.dart';
 import 'package:servicemen_technician_app/services/local_data/shared_pref.dart';
@@ -56,6 +57,7 @@ class MyApp extends StatelessWidget {
         Provider(create: (_) => SharedPrefService()),
         ChangeNotifierProvider(create: (_) => AuthProvider()),
         ChangeNotifierProvider(create: (_) => DashboardProvider()),
+        ChangeNotifierProvider(create: (_) => BookingProvider()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

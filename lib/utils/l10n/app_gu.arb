@@ -58,6 +58,8 @@
   "beforeStartWorkUploadPhoto": "કામ શરૂ કરતા પહેલા ફોટો અપલોડ કરો",
   "beforeStartingTheWorkPleaseCaptureImagesOfTheProductsCurrentCondition": "કામ શરૂ કરતા પહેલા કૃપા કરીને ઉત્પાદનની વર્તમાન સ્થિતિના ફોટા લો.",
   "uploadImage": "છબી અપલોડ કરો",
+  "takePhoto": "ફોટો લો",
+  "chooseFromGallery": "ગેલેરીમાંથી પસંદ કરો",
   "uploadJEPGPNG": "JPEG / PNG અપલોડ કરો",
   "startWork": "કામ શરૂ કરો",
   "notesForProof": "પુરાવા માટે નોંધો",
@@ -83,5 +85,7 @@
   "completedJobs": "પૂર્ણ કામ",
   "serviceDate": "સેવાની તારીખ",
   "cancel": "રદ કરો",
-  "areYouSureYouWantToLogOut": "શું તમે ખરેખર લૉગ આઉટ કરવા માંગો છો?"
+  "areYouSureYouWantToLogOut": "શું તમે ખરેખર લૉગ આઉટ કરવા માંગો છો?",
+  "completedDate": "પૂર્ણ થયાની તારીખ",
+  "cancelledDate": "રદ કરવાની તારીખ"
 }

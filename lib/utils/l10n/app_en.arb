@@ -58,6 +58,8 @@
   "beforeStartWorkUploadPhoto": "Before Start Work Upload Photo",
   "beforeStartingTheWorkPleaseCaptureImagesOfTheProductsCurrentCondition": "Before starting the work, please capture images of the product’s current condition.",
   "uploadImage": "Upload Image",
+  "takePhoto": "Take Photo",
+  "chooseFromGallery": "Choose from Gallery",
   "uploadJEPGPNG": "Upload JEPG / PNG",
   "startWork": "Start Work",
   "notesForProof": "Notes for Proof",
@@ -83,5 +85,7 @@
   "completedJobs": "Completed Jobs",
   "serviceDate": "Service Date",
   "cancel": "Cancel",
-  "areYouSureYouWantToLogOut": "Are you sure you want to log out?"
+  "areYouSureYouWantToLogOut": "Are you sure you want to log out?",
+  "completedDate": "Completed Date",
+  "cancelledDate": "Cancelled Date"
 }

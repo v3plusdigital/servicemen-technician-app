@@ -682,4 +682,3 @@ typedef LogoutCallback = Future<void> Function();
 class AuthSession {
   static LogoutCallback? onUnauthorized;
 }
-
